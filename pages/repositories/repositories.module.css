@@ -1,0 +1,27 @@
+.section__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 30px;
+  margin-top: 3rem;
+}
+
+.section__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1rem;
+}
+
+.section__search .section__input {
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 10px;
+}
+/*# sourceMappingURL=repositories.module.css.map */
