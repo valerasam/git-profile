@@ -2,18 +2,24 @@
   display: flex;
   justify-content: center;
   font-size: 30px;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 .section__search{
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
   .section__input{
     border: 1px solid black;
-    border-radius: 7px;
-    padding: 10px;
+    border-radius: 6px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    transition: 0.4s all ease;
   }
-}
-.section__repositories{
-  height: 500px;
+  .section__input:active,
+  .section__input:focus{
+    padding-right: 70px;
+    border-color: rgb(16, 128, 128);
+    box-shadow: 0px 0px 10px 3px rgb(89, 170, 170);
+  }
 }

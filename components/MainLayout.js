@@ -16,7 +16,7 @@ export function MainLayout({ children, title, keywords }) {
         <meta name="description" content="this is the github profile for searching and browsing their repositories" />
         <meta charSet="utf-8" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet"></link>
       </Head>
       <div className={styles.header, styles.header__section}>
         <div className={styles.container}>

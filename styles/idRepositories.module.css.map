@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,oBAAoB,CAAA;EAClB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,MAAM;CAKxB;;AARD,AAIE,oBAJkB,CAIlB,kBAAkB,CAAA;EAChB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;CACjB",
+    "sources": [
+        "idRepositories.module.scss"
+    ],
+    "names": [],
+    "file": "idRepositories.module.css"
+}

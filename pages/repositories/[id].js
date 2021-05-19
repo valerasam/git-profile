@@ -1,28 +1,13 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-
+import styles from '../../styles/idRepositories.module.css';
 
 export default function Repository() {
   const { query } = useRouter();
   return (
-    <>
-      <div>
-        <h1>Repository id: {query.id}</h1>
-        <Link href={`/repositories`}><a>Back to repositories</a></Link>
-      </div>
-      <style jsx>
-        {`
-          h1{
-            dispaly: flex;
-            justify-content: center;
-            font-size: 25px;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            height: 500px;
-            color: black;
-          }
-        `}
-      </style>
-    </>
+    <div className={styles.section__repository}>
+      <h1 className={styles.repository__title}>Repository name: {JSON.stringify(query.id)}</h1><br />
+      <Link className={styles.repository__button, styles.button_back} href={`/repositories`}><a>Back to repositories</a></Link>
+    </div>
   );
 }

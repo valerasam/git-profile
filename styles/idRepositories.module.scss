@@ -1,0 +1,9 @@
+.section__repository{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .repository__title{
+    font-size: 25px;
+    font-weight: 600;
+  }
+}
