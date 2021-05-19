@@ -18,6 +18,8 @@ export default function Repository() {
             font-size: 25px;
             font-weight: 700;
             margin-bottom: 1rem;
+            height: 500px;
+            color: black;
           }
         `}
       </style>

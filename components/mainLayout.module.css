@@ -43,6 +43,7 @@
 
 .header__section .container .header__nav .nav__link:hover,
 .header__section .container .header__nav .nav__link:active {
+  font-size: 21px;
   color: #59aaaa;
 }
 
@@ -50,10 +51,12 @@
   font-size: 20px;
   font-weight: 700;
   color: black;
+  background: none;
 }
 
 .header__section .container .header__nav .nav__link_signin:hover,
 .header__section .container .header__nav .nav__link_signin:active {
+  font-size: 21px;
   color: #59aaaa;
 }
-/*# sourceMappingURL=mainLayout.module.css.map */
+/*# sourceMappingURL=MainLayout.module.css.map */

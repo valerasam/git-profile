@@ -22,15 +22,18 @@
       }
       .nav__link:hover,
       .nav__link:active{
+        font-size: 21px;
         color: rgb(89, 170, 170);
       }
       .nav__link_signin{
         font-size: 20px;
         font-weight: 700;
         color: black;
+        background: none;
       }
       .nav__link_signin:hover,
       .nav__link_signin:active{
+        font-size: 21px;
         color: rgb(89, 170, 170);
       }
     }

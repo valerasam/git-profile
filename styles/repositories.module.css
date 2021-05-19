@@ -24,4 +24,8 @@
   border-radius: 7px;
   padding: 10px;
 }
+
+.section__repositories {
+  height: 500px;
+}
 /*# sourceMappingURL=repositories.module.css.map */

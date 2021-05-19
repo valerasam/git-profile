@@ -1,9 +1,12 @@
+import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+import { signIn, signOut, useSession } from 'next-auth/client';
 
 import styles from './mainLayout.module.css';
 
 export function MainLayout({ children, title, keywords }) {
+  const [session, loading] = useSession();
 
   return (
     <>
@@ -25,9 +28,17 @@ export function MainLayout({ children, title, keywords }) {
             <Link href={'/repositories'}>
               <a className={styles.nav__link} >Repositories</a>
             </Link>
-            <Link href={'https://github.com/login'}>
-              <a className={styles.nav__link_signin} >Sign in</a>
-            </Link>
+            {!session && (
+              <>
+                <button className={styles.nav__link_signin} onClick={() => signIn()}>Sign in with GitHub</button>
+              </>
+            )}
+            {session && (
+              <>
+                Sign in as {session.user.name}<br />
+                <button className={styles.nav__link_signin} onClick={() => signOut()}>Sign out</button>
+              </>
+            )}
           </nav>
           <main className={styles.header__main__section}>
             {children}
