@@ -16,12 +16,15 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 
-.section__search .section__input {
-  border: 1px solid black;
-  border-radius: 6px;
+.section__search .search__input_repositories {
+  border-bottom: 1px solid black;
   padding-top: 7px;
   padding-bottom: 7px;
   padding-left: 10px;
@@ -29,11 +32,84 @@
   transition: 0.4s all ease;
 }
 
-.section__search .section__input:active,
-.section__search .section__input:focus {
+.section__search .search__input_repositories:active,
+.section__search .search__input_repositories:focus,
+.section__search .section__search__input_owner:active,
+.section__search .section__search__input_owner:focus {
+  border-radius: 6px;
   padding-right: 70px;
   border-color: #108080;
   -webkit-box-shadow: 0px 0px 10px 3px #59aaaa;
           box-shadow: 0px 0px 10px 3px #59aaaa;
+}
+
+.section__repositories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section__repositories li {
+  margin-bottom: 5rem;
+}
+
+.section__repositories li .repository__title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+}
+
+.section__repositories li .repository__title:active,
+.section__repositories li .repository__title:hover {
+  color: #0a8d8d;
+  cursor: pointer;
+}
+
+.section__repositories li .repository {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.section__repositories li .repository .repository__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.section__repositories li .repository .repository__info .repository__language {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 2rem;
+}
+
+.section__repositories li .repository .repository__info .repository__language .repository__language_name {
+  margin-left: 0.5rem;
+}
+
+.section__repositories li .repository_underline {
+  border-bottom: 1px solid black;
 }
 /*# sourceMappingURL=repositories.module.css.map */

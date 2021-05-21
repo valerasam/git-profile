@@ -35,6 +35,47 @@
   font-weight: 700;
 }
 
+.header__section .container .header__nav .header__nav__input {
+  height: 30px;
+  width: 170px;
+  border-radius: 15px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  border: 1px solid #d4d4d4;
+  background-color: #555555;
+  color: #cacaca;
+  font-size: 13px;
+  font-weight: 600;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.header__section .container .header__nav .header__nav__input:active,
+.header__section .container .header__nav .header__nav__input:focus {
+  border-radius: 20px;
+  height: 35px;
+  width: 250px;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.header__section .container .header__nav .header__nav__input::-webkit-input-placeholder {
+  color: #cacaca;
+}
+
+.header__section .container .header__nav .header__nav__input:-ms-input-placeholder {
+  color: #cacaca;
+}
+
+.header__section .container .header__nav .header__nav__input::-ms-input-placeholder {
+  color: #cacaca;
+}
+
+.header__section .container .header__nav .header__nav__input::placeholder {
+  color: #cacaca;
+}
+
 .header__section .container .header__nav .nav__link {
   font-size: 20px;
   font-weight: 700;
@@ -58,6 +99,42 @@
 .header__section .container .header__nav .nav__link_signin:active {
   font-size: 21px;
   color: #59aaaa;
+}
+
+.header__section .container .header__nav .header__user__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__section .container .header__nav .header__user__info .header__user__name {
+  margin-left: 2.5rem;
+}
+
+.header__section .container .header__nav .header__user__info .header__user__image {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s all ease;
+}
+
+.header__section .container .header__nav .header__user__info .header__user__image:active,
+.header__section .container .header__nav .header__user__info .header__user__image:focus {
+  -webkit-transform: translate(-350px, 350px);
+          transform: translate(-350px, 350px);
+  width: 300px;
+  height: 300px;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
 }
 
 .header__section .container .header__main__section {

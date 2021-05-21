@@ -7,19 +7,64 @@
 .section__search{
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 2rem;
-  .section__input{
-    border: 1px solid black;
-    border-radius: 6px;
+  margin-bottom: 3rem;
+  
+  .search__input_repositories{
+    border-bottom: 1px solid black;
     padding-top: 7px;
     padding-bottom: 7px;
     padding-left: 10px;
     transition: 0.4s all ease;
   }
-  .section__input:active,
-  .section__input:focus{
+  .search__input_repositories:active,
+  .search__input_repositories:focus,
+  .section__search__input_owner:active,
+  .section__search__input_owner:focus{
+    border-radius: 6px;
     padding-right: 70px;
     border-color: rgb(16, 128, 128);
     box-shadow: 0px 0px 10px 3px rgb(89, 170, 170);
   }
+}
+.section__repositories{
+  display: flex;
+  justify-content: center;
+  li{
+    margin-bottom: 5rem;
+    .repository__title{
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      transition: 0.2s all ease;
+    }
+    .repository__title:active,
+    .repository__title:hover{
+      color: rgb(10, 141, 141);
+      cursor: pointer;
+    }
+    .repository{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+
+      .repository__info{
+        display: flex;
+        flex-direction: row;
+        .repository__language{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-right: 2rem;
+          .repository__language_name{
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+    .repository_underline{
+      border-bottom: 1px solid black;
+    }
+  } 
 }

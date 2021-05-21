@@ -12,4 +12,39 @@
   font-size: 30px;
   margin-top: 3rem;
 }
+
+.container .input_owner_submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.container .input_owner_submit:hover {
+  cursor: pointer;
+}
+
+.container .input_owner_submit:active,
+.container .input_owner_submit:focus {
+  cursor: pointer;
+  border-radius: 100%;
+  background: #59aaaa;
+}
+
+.container .section__search__input_owner {
+  border-bottom: 1px solid black;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 10px;
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s all ease;
+  margin-right: 2rem;
+}
 /*# sourceMappingURL=Home.module.css.map */

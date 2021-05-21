@@ -6,7 +6,7 @@ import { signIn, signOut, useSession } from 'next-auth/client';
 import styles from './mainLayout.module.css';
 
 export function MainLayout({ children, title, keywords }) {
-  const [session, loading] = useSession();
+  const [session] = useSession();
 
   return (
     <>
@@ -35,7 +35,10 @@ export function MainLayout({ children, title, keywords }) {
             )}
             {session && (
               <>
-                Sign in as {session.user.name}<br />
+                <div className={styles.header__user__info}>
+                  <img className={styles.header__user__image} src={session.user.image} />
+                  <p className={styles.header__user__name}>Signed in as {session.user.name}</p>
+                </div>
                 <button className={styles.nav__link_signin} onClick={() => signOut()}>Sign out</button>
               </>
             )}
