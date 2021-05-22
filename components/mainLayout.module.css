@@ -119,7 +119,7 @@
 }
 
 .header__section .container .header__nav .header__user__info .header__user__image {
-  position: fixed;
+  position: relative;
   width: 25px;
   height: 25px;
   border-radius: 100%;

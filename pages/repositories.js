@@ -7,6 +7,7 @@ import { initializeApollo } from '../lib/apollo';
 import styles from '../styles/repositories.module.css';
 
 export default function Repositories() {
+
   const { data, error, loading } = useQuery(GET_REPOSITORIES_BY_NAME);
   const [repositorySearch, setRepositorySearch] = useState('');
   const [filteredRepositories, setFilteredRepositories] = useState([]);
