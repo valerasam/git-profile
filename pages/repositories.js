@@ -91,7 +91,7 @@ export default function Repositories() {
           />
         </section>
         <section className={styles.section__repositories}>
-          <ul>
+          <ul className={styles.section__repositories_list}>
             {filteredRepositories.map((item) =>
               <Repository key={item.id} data={{ ...item }} />)}
           </ul>

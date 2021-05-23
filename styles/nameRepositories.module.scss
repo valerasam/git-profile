@@ -2,13 +2,18 @@
   display: flex;
   justify-content: center;
   .section__repository{
+    display: flex;
+    flex-direction: column;
     margin-top: 50px;
-    width: 800px; 
+    width: 900px; 
     .repository__header{
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+      .repository__button__mobile_back{
+        display: none;
+      }
       .repository__title{
         font-size: 25px;
         font-weight: 600;
@@ -22,12 +27,15 @@
         padding: 0.5rem;
         font-size: 14px;
         font-weight: 600;
+        transition: 0.3s all ease;
       }
       .repository__button_back:active,
-      .repository__button_back:focus{
+      .repository__button_back:focus,
+      .repository__button_back:hover{
         background: rgb(71, 71, 71);
         color: #fff;
         cursor: pointer;
+        transition: 0.3s all ease;
       }
     }
     .repository__main__info{
@@ -43,22 +51,81 @@
         font-size: 14px;
         font-weight: 600;
       }
-      .repository__info__link{
-        width: 335px;
-        font-size: 14px;
-        font-weight: 600;
-        border: 1px solid black;
-        border-radius: 7px;
-        background: rgb(71, 71, 71);
-        color: #fff;
-        border-radius: 10px;
-        padding-top: 0.3rem;
-        padding-bottom: 0.3rem;
-        padding-left: 0.7rem;
+      .repository__clone__section{
+        display: flex;
+        flex-direction: row;
+        .repository__clone__link{
+          margin-right: 0.5rem;          
+          width: 350px;
+          font-size: 14px;
+          font-weight: 600;
+          border: 1px solid black;
+          border-radius: 7px;
+          background: rgb(71, 71, 71);
+          color: #fff;
+          border-radius: 10px;
+          padding-top: 0.3rem;
+          padding-bottom: 0.3rem;
+          padding-left: 0.7rem;
+        }
+        .repository__clone__button{
+          background: rgb(192, 192, 192);
+          padding: 3px;
+          width: 24px;
+          height: 25px;
+          border-radius: 5px;
+          transition: 0.2s all ease;
+          cursor: pointer;
+        }
+        .repository__clone__button:active,
+        .repository__clone__button:hover,
+        .repository__clone__button:focus{
+          background: rgb(84, 179, 179);
+          transition: 0.1s all ease;
+        }
       }
     }
     .section__repository__commit{
       color: black;
+    }
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .repository__wrapper{
+    .section__repository{
+      display: flex;
+      justify-content: center;
+      width: 90%;
+      .repository__header{
+        display: flex;
+        justify-content: space-between;
+        .repository__button_back{
+          display: none;
+        }
+        .repository__title{
+          position: fixed;
+          display: flex;
+          align-items: flex-start;
+          font-size: 20px;
+          font-weight: 700;
+        }
+        .repository__button__mobile_back{
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-start;
+        }
+      }
+      .repository__main__info{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        .repository__info__branches{
+          margin-bottom: 0.5rem;
+        }
+      }
+      
     }
   }
 }

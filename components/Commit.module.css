@@ -31,6 +31,18 @@
   width: 100%;
   height: 1px;
   background: #000;
-  margin-top: 1rem;
+  margin-top: 1px;
+}
+
+@media screen and (max-width: 600px) {
+  .section__commit {
+    width: 90vw;
+  }
+  .section__commit .commit__item {
+    font-size: 12px;
+  }
+  .section__commit .commit__item .commit__name {
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=Commit.module.css.map */

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useQuery } from '@apollo/client';
@@ -17,6 +18,8 @@ export default function Repository() {
   const queryName = router.query.name;
   const { data, loading, error } = useQuery(GET_REPOSITORY_BRANCHES, { variables: { queryName, ownerName } });
   const [branchData, setBranchData] = useState([]);
+  const cloneLink = data?.user?.repository?.url + ".git";
+  const [copyInput, setCopyInput] = useState(cloneLink);
 
   useEffect(() => {
     if (data) {
@@ -30,6 +33,11 @@ export default function Repository() {
     <div className={styles.repository__wrapper}>
       <div className={styles.section__repository}>
         <div className={styles.repository__header}>
+          <Link href={`/repositories`}>
+            <a className={styles.repository__button__mobile_back}>
+              &#10006;
+            </a>
+          </Link>
           <h1 className={styles.repository__title}>
             Repository name: {queryName}
           </h1>
@@ -48,13 +56,26 @@ export default function Repository() {
               })
             }
           </select>
-          <input
-            type='text'
-            name='clone_url'
-            className={styles.repository__info__link}
-            value={data.user.repository.url + '.git'}
-            readOnly={true}
-          />
+          <div className={styles.repository__clone__section}>
+            <input
+              type='text'
+              name='clone_url'
+              className={styles.repository__clone__link}
+              value={cloneLink ?? copyInput}
+              readOnly={true}
+              onChange={e => setCopyInput(e.target.value)}
+            />
+            <CopyToClipboard
+              text={cloneLink ?? copyInput}
+            >
+              <button>
+                <img
+                  alt="clone image"
+                  className={styles.repository__clone__button}
+                  src='https://image.flaticon.com/icons/png/512/1621/1621635.png' />
+              </button>
+            </CopyToClipboard>
+          </div>
         </div>
         <div className={styles.section__repository__commit}>
           <ul>
@@ -62,7 +83,7 @@ export default function Repository() {
           </ul>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 

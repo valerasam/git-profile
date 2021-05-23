@@ -69,18 +69,9 @@
         }
 
         .header__user__image{
-          position: fixed;
           width: 25px;
           height: 25px;
           border-radius: 100%;
-          transition: 0.4s all ease; 
-        }
-        .header__user__image:active,
-        .header__user__image:focus{
-          transform: translate(-350px, 350px);
-          width: 300px;
-          height: 300px;
-          transition: 1s all ease; 
         }
       }
       
@@ -92,3 +83,4 @@
     }
   }
 }
+
