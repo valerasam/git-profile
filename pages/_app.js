@@ -1,7 +1,21 @@
-import '../styles/globals.css'
+import '../styles/global.css';
+import React from 'react';
+import { Provider } from 'next-auth/client';
+import { ApolloProvider } from '@apollo/client';
+import { useApollo } from '../lib/apollo';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+
+  const ApolloClient = useApollo(pageProps.initialApolloState);
+
+  // console.log("sessionGet: ", session);
+  return (
+    <ApolloProvider client={ApolloClient}>
+      <Provider session={pageProps.session}>
+        <Component {...pageProps} />
+      </Provider>
+    </ApolloProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;

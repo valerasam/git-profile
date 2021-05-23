@@ -1,0 +1,33 @@
+.container{
+  width: 1140px;
+  .haeder__title{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 3rem;
+  }
+  .input_owner_submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+  }
+  .input_owner_submit:hover{
+    cursor: pointer;   
+  }
+  .input_owner_submit:active,
+  .input_owner_submit:focus{
+    cursor: pointer;
+    border-radius: 100%;
+    background: rgb(89, 170, 170);
+  }
+  .section__search__input_owner{
+    border-bottom: 1px solid black;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    transition: 0.4s all ease;
+    margin-right: 2rem;
+  }
+}

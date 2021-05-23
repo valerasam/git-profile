@@ -1,0 +1,36 @@
+.section__commit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section__commit .commit__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 2.5rem;
+  font-size: 18px;
+  line-height: 1.7rem;
+}
+
+.section__commit .commit__item .commit__name {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.section__commit .commit__item .commit_underline {
+  width: 100%;
+  height: 1px;
+  background: #000;
+  margin-top: 1rem;
+}
+/*# sourceMappingURL=Commit.module.css.map */

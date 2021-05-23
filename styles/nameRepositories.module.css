@@ -1,0 +1,93 @@
+.repository__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.repository__wrapper .section__repository {
+  margin-top: 50px;
+  width: 800px;
+}
+
+.repository__wrapper .section__repository .repository__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.repository__wrapper .section__repository .repository__header .repository__title {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 4rem;
+}
+
+.repository__wrapper .section__repository .repository__header .repository__button_back {
+  margin-bottom: 3.5rem;
+  color: #474747;
+  border: 2px solid #474747;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.repository__wrapper .section__repository .repository__header .repository__button_back:active,
+.repository__wrapper .section__repository .repository__header .repository__button_back:focus {
+  background: #474747;
+  color: #fff;
+  cursor: pointer;
+}
+
+.repository__wrapper .section__repository .repository__main__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.repository__wrapper .section__repository .repository__main__info .repository__info__branches {
+  background: #474747;
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.3rem;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.repository__wrapper .section__repository .repository__main__info .repository__info__link {
+  width: 335px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid black;
+  border-radius: 7px;
+  background: #474747;
+  color: #fff;
+  border-radius: 10px;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.7rem;
+}
+
+.repository__wrapper .section__repository .section__repository__commit {
+  color: black;
+}
+/*# sourceMappingURL=nameRepositories.module.css.map */

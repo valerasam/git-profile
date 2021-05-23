@@ -1,0 +1,70 @@
+.section__repositories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section__repositories li {
+  margin-bottom: 5rem;
+}
+
+.section__repositories li .repository__title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+}
+
+.section__repositories li .repository__title:active,
+.section__repositories li .repository__title:hover {
+  color: #0a8d8d;
+  cursor: pointer;
+}
+
+.section__repositories li .repository {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.section__repositories li .repository .repository__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.section__repositories li .repository .repository__info .repository__language {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 2rem;
+}
+
+.section__repositories li .repository .repository__info .repository__language .repository__language_name {
+  margin-left: 0.5rem;
+}
+
+.section__repositories li .repository_underline {
+  border-bottom: 1px solid black;
+}
+/*# sourceMappingURL=Repository.module.css.map */

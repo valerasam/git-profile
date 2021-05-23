@@ -1,0 +1,94 @@
+.header__section{
+  display: flex;
+  justify-content: center;
+  .container{
+    width: 1140px;
+    margin: 0 auto;
+    .header__nav{
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      .header__nav__title{
+        font-size: 35px;
+        font-weight: 700;
+      }
+      .header__nav__input{
+        height: 30px;
+        width: 170px;
+        border-radius: 15px;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        border: 1px solid rgb(212, 212, 212);
+        background-color: rgb(85, 85, 85);
+        color: rgb(202, 202, 202);
+        font-size: 13px;
+        font-weight: 600;
+        transition: 0.3s all ease;
+      }
+      .header__nav__input:active,
+      .header__nav__input:focus{
+        border-radius: 20px;
+        height: 35px;
+        width: 250px;
+        transition: 0.3s all ease;
+      }
+      .header__nav__input::placeholder{
+        color: rgb(202, 202, 202);
+      }
+      .nav__link{
+        font-size: 20px;
+        font-weight: 700;
+        color: black;
+      }
+      .nav__link:hover,
+      .nav__link:active{
+        font-size: 21px;
+        color: rgb(89, 170, 170);
+      }
+      .nav__link_signin{
+        font-size: 20px;
+        font-weight: 700;
+        color: black;
+        background: none;
+      }
+      .nav__link_signin:hover,
+      .nav__link_signin:active{
+        font-size: 21px;
+        color: rgb(89, 170, 170);
+      }
+      .header__user__info{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .header__user__name{
+          margin-left: 2.5rem;
+        }
+
+        .header__user__image{
+          position: fixed;
+          width: 25px;
+          height: 25px;
+          border-radius: 100%;
+          transition: 0.4s all ease; 
+        }
+        .header__user__image:active,
+        .header__user__image:focus{
+          transform: translate(-350px, 350px);
+          width: 300px;
+          height: 300px;
+          transition: 1s all ease; 
+        }
+      }
+      
+    }
+    .header__main__section{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+}
