@@ -4,14 +4,18 @@ import Link from 'next/link';
 import { useQuery } from '@apollo/client';
 import { initializeApollo } from '../../lib/apollo';
 import GET_REPOSITORY_BRANCHES from '../../lib/queries/getRepositoryBranches';
-
-import styles from '../../styles/idRepositories.module.css';
 import Commit from '../../components/Commit';
+import { useSession } from 'next-auth/client';
+
+import styles from '../../styles/nameRepositories.module.css';
+
 
 export default function Repository() {
   const router = useRouter();
+  const [session] = useSession();
+  const ownerName = session?.user?.name;
   const queryName = router.query.name;
-  const { data, loading, error } = useQuery(GET_REPOSITORY_BRANCHES, { variables: { queryName } });
+  const { data, loading, error } = useQuery(GET_REPOSITORY_BRANCHES, { variables: { queryName, ownerName } });
   const [branchData, setBranchData] = useState([]);
 
   useEffect(() => {
@@ -30,7 +34,9 @@ export default function Repository() {
             Repository name: {queryName}
           </h1>
           <Link href={`/repositories`}>
-            <a className={styles.repository__button_back}>Back to repositories</a>
+            <a className={styles.repository__button_back}>
+              Back to repositories
+            </a>
           </Link>
         </div>
         <div className={styles.repository__main__info}>
@@ -38,10 +44,7 @@ export default function Repository() {
             <option>Branches</option>
             {
               branchData.map(edge => {
-                return (
-                  edge,
-                  <option key={edge.id}>{edge.node.branchName}</option>
-                );
+                return <option key={edge.node.id}>{edge.node.branchName}</option>;
               })
             }
           </select>

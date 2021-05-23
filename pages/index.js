@@ -1,11 +1,9 @@
-import { useSession } from 'next-auth/client';
-import React, { useState } from 'react';
+import React from 'react';
 import { MainLayout } from '../components/MainLayout';
 
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
-
 
   return (
     <>
@@ -17,6 +15,5 @@ export default function Home() {
         </div>
       </MainLayout>
     </>
-
   );
 }

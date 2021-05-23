@@ -11,7 +11,6 @@ export default function Commit() {
   const [session] = useSession();
   const repoName = router.query.name;
   const ownerName = session.user.name;
-
   const { data, loading, error } = useQuery(GET_REPOSITORY_COMMIT, { variables: { repoName, ownerName } });
   const [commitData, setCommitData] = useState([]);
 
@@ -24,11 +23,11 @@ export default function Commit() {
   if (loading) return <h1>Loading...</h1>;
   if (error || !data) return <h2>Error...</h2>;
   return (
-    <div className={styles.section__commit}>
+    <li className={styles.section__commit}>
       {
         commitData.map(edge => {
           return (
-            <div key={edge.id} className={styles.commit__item}>
+            <div key={edge.node.id} className={styles.commit__item}>
               <div className={styles.commit__name}>
                 Commit-name: {edge.node.messageHeadline}
               </div>
@@ -49,7 +48,7 @@ export default function Commit() {
           );
         })
       }
-    </div>
+    </li>
   );
 }
 

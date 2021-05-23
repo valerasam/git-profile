@@ -2,12 +2,15 @@ import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import { signIn, signOut, useSession } from 'next-auth/client';
-
 import styles from './mainLayout.module.css';
 
 export function MainLayout({ children, title, keywords }) {
   const [session] = useSession();
-
+  // const [sessionN] = useSession();
+  // session ? localStore.setItem(session.accessToken) : console.log("Plese log in for checking repositories!");
+  // !session ?} : localStorage.setItem(session.accessToken);
+  // // console.log("lStore: ", localStorage);
+  // console.log("sessionSet: ", session);
   return (
     <>
       <Head>
@@ -22,12 +25,6 @@ export function MainLayout({ children, title, keywords }) {
         <div className={styles.container}>
           <nav className={styles.header__nav}>
             <h1 className={styles.header__nav__title}>GitHub profile</h1>
-            <Link href={'/'}>
-              <a className={styles.nav__link} >Home</a>
-            </Link>
-            <Link href={'/repositories'}>
-              <a className={styles.nav__link} >Repositories</a>
-            </Link>
             {!session && (
               <>
                 <button className={styles.nav__link_signin} onClick={() => signIn()}>Sign in with GitHub</button>
@@ -35,6 +32,12 @@ export function MainLayout({ children, title, keywords }) {
             )}
             {session && (
               <>
+                <Link href={'/'}>
+                  <a className={styles.nav__link} >Home</a>
+                </Link>
+                <Link href={'/repositories'}>
+                  <a className={styles.nav__link} >Repositories</a>
+                </Link>
                 <div className={styles.header__user__info}>
                   <img className={styles.header__user__image} src={session.user.image} />
                   <p className={styles.header__user__name}>Signed in as {session.user.name}</p>
