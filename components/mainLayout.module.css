@@ -119,22 +119,9 @@
 }
 
 .header__section .container .header__nav .header__user__info .header__user__image {
-  position: fixed;
   width: 25px;
   height: 25px;
   border-radius: 100%;
-  -webkit-transition: 0.4s all ease;
-  transition: 0.4s all ease;
-}
-
-.header__section .container .header__nav .header__user__info .header__user__image:active,
-.header__section .container .header__nav .header__user__info .header__user__image:focus {
-  -webkit-transform: translate(-350px, 350px);
-          transform: translate(-350px, 350px);
-  width: 300px;
-  height: 300px;
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
 }
 
 .header__section .container .header__main__section {
